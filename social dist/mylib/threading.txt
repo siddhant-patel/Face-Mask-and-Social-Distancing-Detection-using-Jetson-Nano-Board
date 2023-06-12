@@ -1,0 +1,26 @@
+Threads are basically the smallest executable units in the processing schedules
+
+And threading is the process of creating a separate task that serves a unique feature which here takes the form of polling the system to capture and store frames from the camera.
+    
+Using threading to handle I/O-heavy tasks (such as reading frames from a camera sensor) is a programming model that has existed for decades.​
+
+    This is a popular procedure that is applied when the software application is bottlenecked by the hardware limitations. For example, when your computer is incapable of simultaneously capturing, processing and outputting the results especially when a deep-learning model is involved in the works as well.​
+
+    Essentially, through Threading, we aim to remove OpenCV's internal buffer (which basically stores the new frames yet to be processed until your system processes the old frames) and thus reduces the lag/increases fps.​
+
+    It is most suitable for solid performance on complex real-time applications​
+
+In our program, we start by instantiating the thread class and define two functions. 
+
+The reader function reads the frames captured from the camera, checks the queue for any unprocessed frames and if there is one, remove it with priority and put the next frame in.
+
+this reduces lag
+
+the other function is the initialization function that gets the queue from the reader function and runs the threading with the thread target frames as the ones stored in the queue.
+
+the threads are set to be daemon threads.
+ 
+Daemon threads are those threads which are abruptly stopped at shutdown. Their resources (such as open files, database transactions, etc.). this helps with the delay as well.
+
+and these frames are then sent to the dll model inside the main function.
+    ​
