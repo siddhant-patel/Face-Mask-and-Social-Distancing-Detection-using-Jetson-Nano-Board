@@ -18,4 +18,4 @@ This project could be used in a variety of settings, such as airports, hospitals
 
 This project provides a comprehensive overview of the use of deep learning techniques for detecting face masks and social distancing using the Jetson Nano board. I hope that the findings will be helpful to anyone interested in exploring the potential of deep learning in addressing public health challenges.
 
-## Refer the Project Report.pdf file for detailed information regarding the project.
+## Refer the Project_Report.pdf file for detailed information regarding the project.
